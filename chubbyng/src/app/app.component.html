@@ -9,7 +9,6 @@
           <mat-label>Set language:</mat-label>
           <mat-select [(value)]="selectedLanguage" (selectionChange)="langChange($event)">
             <mat-select-trigger>
-              <!-- <span class="flag-icon flag-icon-{{selectedLanguage | lowercase}}"></span>  -->
               {{getSelectedLanguageDescription()}}
             </mat-select-trigger>
             <mat-option *ngFor="let lang of Languages" [value]="lang.langCode">

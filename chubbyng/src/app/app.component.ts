@@ -46,7 +46,7 @@ export class AppComponent {
   }
 
   initTranslationTerms() {
-    this.chubbyTM = "v.";
+    this.chubbyTM = ".";
     this.chubbyId = "2020";
     this.chubbyMinor = "Chubby";
   }
