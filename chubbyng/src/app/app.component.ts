@@ -3,6 +3,7 @@ import { MatSidenav } from '@angular/material/sidenav';
 import { AppSettings } from '../config/appsettings';
 import { MatSelectModule, MatFormField } from '@angular/material';
 import { Language } from './model/Language';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,17 @@ export class AppComponent {
   Languages: Language[];
   selectedLanguage;
 
+  chubbyTM;
+  chubbyId;
+  chubbyMinor;
+  chubbyNo;
+
+  constructor(
+    private translate: TranslateService
+  ){
+      translate.setDefaultLang('en');
+  }
+
   @ViewChild('sidenav', { static: true }) sidenav: MatSidenav;
 
   get screenWidthDefault(){
@@ -24,12 +36,19 @@ export class AppComponent {
 
   ngOnInit() {
     this.initLanguage();
+    this.initTranslationTerms();
 
     if (window.innerWidth < this.screenWidthDefault) {
       this.openState = false;
     } else {
       this.openState = true;
     }
+  }
+
+  initTranslationTerms() {
+    this.chubbyTM = "v.";
+    this.chubbyId = "2020";
+    this.chubbyMinor = "Chubby";
   }
 
   initLanguage(){ //todo: service to get list of languages
@@ -42,7 +61,7 @@ export class AppComponent {
 
   langChange(event){
     this.selectedLanguage = event.value;
-    console.log(event.value);
+    this.selectedLanguage==="us" ? this.translate.use("en") : this.translate.use(this.selectedLanguage);
   }
 
   getSelectedLanguageDescription(){

@@ -33,3 +33,6 @@
     linsong@linsongdeMacBook-Air chubbyng % ng config schematics.@schematics/angular:component.styleext scss
     and rename all file extension and references from .css to .scss
 
+[8] Translation
+    insong@linsongdeMacBook-Air chubbyng % npm install @ngx-translate/core @ngx-translate/http-loader --save
+
