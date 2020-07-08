@@ -1,6 +1,8 @@
 import { Component, ViewChild, HostListener } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { AppSettings } from '../config/appsettings';
+import { MatSelectModule, MatFormField } from '@angular/material';
+import { Language } from './model/Language';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +13,8 @@ import { AppSettings } from '../config/appsettings';
 export class AppComponent {
   
   openState = true;
+  Languages: Language[];
+  selectedLanguage;
 
   @ViewChild('sidenav', { static: true }) sidenav: MatSidenav;
 
@@ -19,11 +23,30 @@ export class AppComponent {
   }
 
   ngOnInit() {
+    this.initLanguage();
+
     if (window.innerWidth < this.screenWidthDefault) {
       this.openState = false;
     } else {
       this.openState = true;
     }
+  }
+
+  initLanguage(){ //todo: service to get list of languages
+    this.selectedLanguage = "us";
+    this.Languages = [
+      new Language("us", "US English"),
+      new Language("fr", "French")
+    ];
+  }
+
+  langChange(event){
+    this.selectedLanguage = event.value;
+    console.log(event.value);
+  }
+
+  getSelectedLanguageDescription(){
+    return this.Languages.filter(x=>x.langCode==this.selectedLanguage)[0].LangDescription;
   }
 
   @HostListener('window:resize', ['$event'])

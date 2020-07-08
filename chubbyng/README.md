@@ -22,4 +22,10 @@
 [5] new component
     linsong@linsongdeMacBook-Air chubbyng % ng g c dashboard --module=app
 
-[6] 
+[6] language set
+    linsong@linsongdeMacBook-Air chubbyng % npm install flag-icon-css --save
+    Add below to angular.json
+        "styles": [
+              "./node_modules/flag-icon-css/css/flag-icon.min.css"
+        ],
+
