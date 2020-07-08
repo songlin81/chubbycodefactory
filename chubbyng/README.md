@@ -29,3 +29,7 @@
               "./node_modules/flag-icon-css/css/flag-icon.min.css"
         ],
 
+[7] Migration from css to scss.
+    linsong@linsongdeMacBook-Air chubbyng % ng config schematics.@schematics/angular:component.styleext scss
+    and rename all file extension and references from .css to .scss
+
