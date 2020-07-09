@@ -20,7 +20,6 @@ export class AppComponent {
   chubbyTM;
   chubbyId;
   chubbyMinor;
-  chubbyNo;
 
   constructor(
     private translate: TranslateService

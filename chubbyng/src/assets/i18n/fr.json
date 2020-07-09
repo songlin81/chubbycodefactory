@@ -1,5 +1,7 @@
 {
     "chubbyTitle": "Chubby fr{{trademark}}",
-    "CN.Series": "Copyright {{Id}} Lin, Song {{minor}} Projets Tous les droits réservés.",
-    "CN.Logon": "Connecter"
+    "CN":{
+        "Series": "Copyright {{Id}} Lin, Song {{minor}} Projets Tous les droits réservés.",
+        "Logon": "Connecter"
+    }
 }
