@@ -1,28 +1,4 @@
-<mat-toolbar color="primary" class="header">
-  <mat-toolbar-row>
-      <button mat-icon-button>
-        <mat-icon (click)="sidenav.toggle()" class="hamburger">menu</mat-icon>
-      </button>
-      <h1>{{ 'chubbyTitle'|translate: {'trademark':chubbyTM} }}&trade;</h1>
-      <div style="font-size: 14px; margin: 10px; width: 50px;">
-        <mat-form-field appearance="fill">
-          <mat-label>Set language:</mat-label>
-          <mat-select [(value)]="selectedLanguage" (selectionChange)="langChange($event)">
-            <mat-select-trigger>
-              {{getSelectedLanguageDescription()}}
-            </mat-select-trigger>
-            <mat-option *ngFor="let lang of Languages" [value]="lang.langCode">
-              <span class="flag-icon flag-icon-{{lang.langCode}}"></span> {{lang.LangDescription}}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
-      <div style="position: absolute; right: 10px;">
-        <a mat-button [routerLink]="'/accounts'"><span translate>CN.Logon</span></a>
-        <span class="flag-icon flag-icon-{{selectedLanguage | lowercase}} flag-icon-squared"></span>
-      </div>
-  </mat-toolbar-row>
-</mat-toolbar>
+<app-header></app-header>
 
 <mat-sidenav-container>
   <mat-sidenav #sidenav [mode]="setScreenMode() ? 'over' : 'side'" [(opened)]="openState">
@@ -39,15 +15,4 @@
   </mat-sidenav-content>
 </mat-sidenav-container>
 
-<div id="toolbar">
-  <div>
-    <mat-toolbar color="primary">
-        <mat-toolbar-row id="container">
-          <div id="spanS">
-            <span> &copy; </span>
-            <span [translate]="'CN.Series'" [translateParams]="{Id: chubbyId, minor:chubbyMinor}"></span>
-          </div>
-        </mat-toolbar-row>
-    </mat-toolbar>
-  </div>
-</div>
+<app-footer></app-footer>
