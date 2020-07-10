@@ -35,9 +35,11 @@
 
 [8] Translation
     insong@linsongdeMacBook-Air chubbyng % npm install @ngx-translate/core @ngx-translate/http-loader --save
+    linsong@linsongdeMacBook-Air chubbyng % ng g s services/langservice
 
 [9] Header and Footer components
     linsong@linsongdeMacBook-Air chubbyng % ng g c header --module=app
     linsong@linsongdeMacBook-Air chubbyng % ng g c footer --module=app
 
-[10] 
+[10] Version service
+    linsong@linsongdeMacBook-Air chubbyng % ng g s services/versionservice

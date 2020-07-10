@@ -17,6 +17,7 @@ import { FooterComponent } from './footer/footer.component';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
+import { VersionserviceService } from './services/versionservice.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     })
   ],
-  providers: [],
+  providers: [VersionserviceService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

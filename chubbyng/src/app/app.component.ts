@@ -15,13 +15,13 @@ export class AppComponent {
   openState = true;
 
   constructor(private titleService: Title){
-      titleService.setTitle('Chubby');
+    titleService.setTitle('Chubby');
   }
 
   @ViewChild('sidenav', { static: true }) sidenav: MatSidenav;
 
   get screenWidthDefault(){
-      return AppSettings.defaultScreenWidth;
+    return AppSettings.defaultScreenWidth;
   }
 
   ngOnInit() {
