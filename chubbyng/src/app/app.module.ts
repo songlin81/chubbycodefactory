@@ -17,12 +17,19 @@ export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 import { VersionserviceService } from './services/versionservice.service';
+import { AccountsComponent } from './accounts/accounts.component';
+import { PersonComponent } from './person/person.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { PathResolveService } from './PathResolveService';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    FooterComponent
+    FooterComponent,
+    AccountsComponent,
+    PersonComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +45,10 @@ import { VersionserviceService } from './services/versionservice.service';
       }
     })
   ],
-  providers: [VersionserviceService],
+  providers: [
+    VersionserviceService, 
+    PathResolveService
+  ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

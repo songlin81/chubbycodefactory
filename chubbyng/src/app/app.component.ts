@@ -27,8 +27,8 @@ export class AppComponent {
 
     translate.setDefaultLang('en');
     this.translate.get(["chubbyTitle", "CN"]).subscribe(res => {
-      console.log(JSON.stringify(res));
-      console.log(res.chubbyTitle);
+      //console.log(JSON.stringify(res));
+      //console.log(res.chubbyTitle);
     });
   }
 

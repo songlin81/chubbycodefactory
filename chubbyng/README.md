@@ -11,7 +11,7 @@
 [3] Revision of port number
     In angular.json, add below inside "serve":
         "host": "localhost",
-        "port": 5000
+        "port": 5001
 
 [4] MD
     linsong@linsongdeMacBook-Air chubbyng % ng add @angular/material
@@ -37,9 +37,13 @@
     insong@linsongdeMacBook-Air chubbyng % npm install @ngx-translate/core @ngx-translate/http-loader --save
     linsong@linsongdeMacBook-Air chubbyng % ng g s services/langservice
 
-[9] Header and Footer components
-    linsong@linsongdeMacBook-Air chubbyng % ng g c header --module=app
+[9] Footer components
     linsong@linsongdeMacBook-Air chubbyng % ng g c footer --module=app
 
 [10] Version service
     linsong@linsongdeMacBook-Air chubbyng % ng g s services/versionservice
+
+[11] Misc components
+    linsong@linsongdeMacBook-Air chubbyng % ng g c accounts --module=app
+    linsong@linsongdeMacBook-Air chubbyng % ng g c person --module=app
+    linsong@linsongdeMacBook-Air chubbyng % ng g c NotFound --module=app

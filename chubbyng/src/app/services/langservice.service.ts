@@ -20,11 +20,6 @@ export class LangserviceService {
 
   getAvailableLanguages(){
     return this.http.get(this.apiurl);
-    //return this.http.get("http://81.70.9.51:5002/getLangList");
-    // return [
-    //   new Language("us", "US English"),
-    //   new Language("fr", "French")
-    // ];
   }
 
   getDefaultLanguage(){
