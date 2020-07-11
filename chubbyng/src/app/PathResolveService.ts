@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
-
 import { paths } from './app-paths';
 
 @Injectable({
