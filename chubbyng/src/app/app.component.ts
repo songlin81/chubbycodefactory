@@ -54,11 +54,11 @@ export class AppComponent {
   }
 
   initLanguage(){
-    console.log(this.langService.getVersionContent());
+    //console.log(this.langService.getVersionContent());
     this.selectedLanguage = this.langService.getDefaultLanguage();
     this.Languages=[];
     this.langService.getAvailableLanguages().subscribe((data)=>{
-       for( var key in data ){
+       for(var key in data){
         this.Languages.push(new Language(key, data[key]));
        }
     });

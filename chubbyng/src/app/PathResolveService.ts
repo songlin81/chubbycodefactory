@@ -19,8 +19,7 @@ export class PathResolveService implements Resolve<string | null> {
 
     this.sortByDistances(typoPath, dictionary);
 
-    console.log(dictionary);
-
+    //console.log(dictionary);
     return `/${dictionary[0]}`;
   }
 

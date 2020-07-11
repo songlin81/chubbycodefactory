@@ -47,3 +47,4 @@
     linsong@linsongdeMacBook-Air chubbyng % ng g c accounts --module=app
     linsong@linsongdeMacBook-Air chubbyng % ng g c person --module=app
     linsong@linsongdeMacBook-Air chubbyng % ng g c NotFound --module=app
+    linsong@linsongdeMacBook-Air chubbyng % ng g c popup --module=app

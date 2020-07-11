@@ -21,6 +21,8 @@ import { AccountsComponent } from './accounts/accounts.component';
 import { PersonComponent } from './person/person.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PathResolveService } from './PathResolveService';
+import { PopupComponent } from './popup/popup.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { PathResolveService } from './PathResolveService';
     FooterComponent,
     AccountsComponent,
     PersonComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,
@@ -43,13 +46,15 @@ import { PathResolveService } from './PathResolveService';
         useFactory: HttpLoaderFactory,
         deps: [HttpClient],
       }
-    })
+    }),
+    FormsModule
   ],
   providers: [
     VersionserviceService, 
     PathResolveService
   ],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  entryComponents:[PopupComponent]
 })
 export class AppModule { }
