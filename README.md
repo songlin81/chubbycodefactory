@@ -5,3 +5,9 @@ Code factory for angular
 <p float="left";>
     <kbd><img src="https://github.com/songlin81/chubbycodefactory/blob/master/screens/1.png" alt="Img 1" width="500"/></kbd>
 </p>
+
+## Material Mt-Dialog and Badge
+<p float="left";>
+    <kbd><img src="https://github.com/songlin81/chubbycodefactory/blob/master/screens/2.png" alt="Img 2" width="500"/></kbd>
+</p>
+
