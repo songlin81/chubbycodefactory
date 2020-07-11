@@ -22,8 +22,9 @@
     <ng-container matColumnDef="remove">
         <mat-header-cell *matHeaderCellDef>
             <button mat-icon-button (click)="removeAll()" matTooltip="Remove all">
-            <mat-icon>clear_all</mat-icon>
+                <mat-icon>clear_all</mat-icon>
             </button>
+            <mat-icon matBadge = "{{foodList.length}}" matBadgeColor = "warn">home</mat-icon>
         </mat-header-cell>
         <mat-cell *matCellDef="let element; let i = index;">
             <button mat-icon-button (click)="removeAt(i)" matTooltip="Remove this score">

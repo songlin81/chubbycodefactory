@@ -41,6 +41,11 @@ export class DashboardComponent implements OnInit {
     const dialogRef = this.dialog.open(PopupComponent, {
       height: '400px',       
       width: '400px',
+      disableClose: true,
+      position: {top: '30px'},
+      hasBackdrop: false,
+      backdropClass: `btn-default`,
+      panelClass: `btn-default`,
     });
     dialogRef.afterClosed().subscribe(result => {
       //if(JSON.stringify(result) != "{}"){
@@ -70,6 +75,7 @@ export class DashboardComponent implements OnInit {
   }
 
   postChanges(){
-    alert('Post changes to server!');
+    alert('Post changes to server (written to console)!');
+    console.log(JSON.stringify(this.foodList));
   }
 }
