@@ -2,16 +2,15 @@ import { Injectable } from '@angular/core';
 import { VersionserviceService } from './versionservice.service';
 import { Language } from '../model/Language';
 import { HttpClient } from '@angular/common/http';
+import { AppSettings } from 'src/config/appsettings';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LangserviceService {
 
-  private apiurl = "http://81.70.9.51:5000/getLangList";
-  
   constructor(private versionService: VersionserviceService,
-              private http: HttpClient) { 
+              private http: HttpClient){ 
   }
 
   getVersionContent(){
@@ -19,7 +18,7 @@ export class LangserviceService {
   }
 
   getAvailableLanguages(){
-    return this.http.get(this.apiurl);
+    return this.http.get(AppSettings.apiurl);
   }
 
   getDefaultLanguage(){

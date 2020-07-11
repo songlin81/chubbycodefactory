@@ -12,7 +12,6 @@ export class NotFoundComponent implements OnInit {
   path: string;
   pathRender: string;
 
-
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
@@ -23,5 +22,4 @@ export class NotFoundComponent implements OnInit {
         this.pathRender = data.path.substring(1);
       });
   }
-
 }
