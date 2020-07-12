@@ -2,6 +2,9 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MatDialog } from '@angular/material';
 import { PopupComponent } from '../popup/popup.component';
 import { Food } from '../model/Food';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { startWith, map, tap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-dashboard',
@@ -18,10 +21,68 @@ export class DashboardComponent implements OnInit {
     {name: 'Gingerbreads', calories: 356, fat: 16, carbs: 49, protein: 4},
   ];
   displayedColumns: string[] = ['name', 'calories', 'fat', 'carbs','protein','remove'];
+  states;
+  myControl = new FormControl();
+  filteredOptions : Observable<string[]>;
 
   tooltipContent: string;
 
+  seasons: string[] = ['Winter', 'Spring', 'Summer', 'Autumn'];
+  favoriteSeason: string;
+
+  selectedValue: string;
+
+  checked = false;
+  labelPosition = 'Status: ';
+
+  datePicker = new FormControl();
+
+  //slider
+  sliderDisabled = false;
+  invert = false;
+  thumbLabel = false;
+  value = 50;
+  vertical = false;
+
+  //toggle
+  divDisabled = false;
+  divChecked = false;
+
+  isavailable = true;
+  months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  selectItem="N/A";
+
   constructor(public dialog: MatDialog) {
+    this.loadStates();
+  }
+
+  loadStates() {
+    var allStates = 'Alabama, Alaska, Arizona, Arkansas, California, Colorado, Delaware,\
+       Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana,\
+       Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana,\
+       Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, New York, North Carolina,\
+       North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina,\
+       South Dakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, West Virginia,\
+       Wisconsin, Wyoming';
+    this.states = allStates.split(/, +/g).map(function (state) {
+       return {
+          value: state.toUpperCase(),
+          display: state
+       };
+    });
+    this.filteredOptions=this.myControl.valueChanges.pipe(
+      tap(value => console.log(value)),
+      startWith(''),
+      map(value => this.filterValues(value))
+    );
+  }
+
+  filterValues(search: string){
+    return this.states.filter(value=>value.value.toLowerCase().indexOf(search.toLowerCase())===0);
+  }
+
+  send() {
+    console.log(this.myControl.value);
   }
 
   ngOnInit() {
@@ -77,5 +138,23 @@ export class DashboardComponent implements OnInit {
   postChanges(){
     alert('Post changes to server (written to console)!');
     console.log(JSON.stringify(this.foodList));
+  }
+
+  handleProductClick()
+  {
+    console.log(this.checked);
+  }
+
+  changedToggle(){
+    this.divChecked=!this.divChecked;
+  }
+
+  getChange(val: string) {
+    this.selectItem=val;
+  }
+
+  toggleTemplate(event) {
+    this.isavailable = !this.isavailable; 
+    console.log(event);
   }
 }

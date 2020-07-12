@@ -22,7 +22,7 @@ import { PersonComponent } from './person/person.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PathResolveService } from './PathResolveService';
 import { PopupComponent } from './popup/popup.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -47,7 +47,8 @@ import { FormsModule } from '@angular/forms';
         deps: [HttpClient],
       }
     }),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     VersionserviceService, 

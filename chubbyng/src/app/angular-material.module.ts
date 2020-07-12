@@ -20,7 +20,12 @@ import {
    MatTableModule,
    MatPaginatorModule,
    MatCardModule,
-   MatDialogModule
+   MatDialogModule,
+   MatTabsModule,
+   MatAutocompleteModule,
+   MatCheckboxModule,
+   MatSliderModule,
+   MatSlideToggleModule
 } from '@angular/material';
 
 @NgModule({
@@ -44,7 +49,12 @@ import {
       MatTableModule,
       MatPaginatorModule,
       MatCardModule,
-      MatDialogModule
+      MatDialogModule,
+      MatTabsModule,
+      MatAutocompleteModule,
+      MatCheckboxModule,
+      MatSliderModule,
+      MatSlideToggleModule
    ],
    exports: [
       MatButtonModule,
@@ -64,7 +74,12 @@ import {
       MatTableModule,
       MatPaginatorModule,
       MatCardModule,
-      MatDialogModule
+      MatDialogModule,
+      MatTabsModule,
+      MatAutocompleteModule,
+      MatCheckboxModule,
+      MatSliderModule,
+      MatSlideToggleModule
    ],
    providers: [
       MatDatepickerModule,

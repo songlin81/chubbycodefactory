@@ -8,7 +8,8 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 })
 export class PopupComponent implements OnInit {
 
-  project:Object;
+  //project:Object;
+  project: any = Object.create(null)
   originalName;
   originalCalories;
 

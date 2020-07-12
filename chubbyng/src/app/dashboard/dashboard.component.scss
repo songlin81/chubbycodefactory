@@ -1,3 +1,39 @@
 table {
     width: 100%;
- }
+}
+
+.tp-form {
+    min-width: 150px;
+    max-width: 250px;
+}
+.tp-full-width {
+    width: 100%;
+}
+
+.tp-radio-group {
+    display: inline-flex;
+    flex-direction: column;
+}
+.tp-radio-button {
+    margin: 5px;
+}
+.tp-selected-value {
+    margin: 15px 0;
+}
+
+.tp-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+}
+.tp-margin {
+    margin: 0 10px;
+}
+
+.mat-slider-horizontal {
+    width: 300px;
+}
+.mat-slider-vertical {
+    height: 200px;
+}
