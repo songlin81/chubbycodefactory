@@ -149,6 +149,15 @@
         <br>Enter id: <input #configId size="6"><br>
         <router-outlet></router-outlet>
     </mat-tab>
-    <mat-tab label = "Misc">Misc contents</mat-tab>
+
+    <mat-tab label = "Misc">
+        <div style = "text-align:center">
+            <b>{{todaydate | date:'d/M/y'}}</b> -- Square root of 25 is: {{mathObject | mathSqrt}}<br>
+            <span ChangeText>{{title | uppercase}}</span>
+        </div>
+
+        <mat-divider style="margin-top: 10px;"></mat-divider>
+        
+    </mat-tab>
     
 </mat-tab-group>

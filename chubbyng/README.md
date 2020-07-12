@@ -56,3 +56,9 @@
     linsong@linsongdeMacBook-Air dashboard % ng g c DashboardConfig
     linsong@linsongdeMacBook-Air dashboard % ng g c DashboardDetail
     linsong@linsongdeMacBook-Air dashboard % ng g c Dashboard404
+
+[13] Pipe
+    linsong@linsongdeMacBook-Air chubbyng % ng g pipe pipes/mathSqrt --module=app
+
+[14] Directives
+    linsong@linsongdeMacBook-Air chubbyng % ng g directive directives/ChangeText --module=app

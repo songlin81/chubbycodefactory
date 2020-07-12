@@ -24,6 +24,8 @@ import { PathResolveService } from './PathResolveService';
 import { PopupComponent } from './popup/popup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardRoutingModule } from './dashboard/dashboard-routing.module';
+import { MathSqrtPipe } from './pipes/math-sqrt.pipe';
+import { ChangeTextDirective } from './directives/change-text.directive';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { DashboardRoutingModule } from './dashboard/dashboard-routing.module';
     AccountsComponent,
     PersonComponent,
     NotFoundComponent,
-    PopupComponent
+    PopupComponent,
+    MathSqrtPipe,
+    ChangeTextDirective
   ],
   imports: [
     BrowserModule,

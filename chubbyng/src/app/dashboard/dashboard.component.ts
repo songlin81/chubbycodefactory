@@ -55,6 +55,10 @@ export class DashboardComponent implements OnInit {
   months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
   selectItem="N/A";
 
+  title="Chubby";
+  todaydate = new Date();
+  mathObject = {val1: 25, val2: 100};
+
   constructor(public dialog: MatDialog,
     private router: Router, private route: ActivatedRoute) {
     this.loadStates();
