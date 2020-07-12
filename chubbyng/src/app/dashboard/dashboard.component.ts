@@ -33,6 +33,8 @@ export class DashboardComponent implements OnInit {
   selectedValue: string;
 
   checked = false;
+  indeterminate = false;
+  disabled = false;
   labelPosition = 'Status: ';
 
   datePicker = new FormControl();
