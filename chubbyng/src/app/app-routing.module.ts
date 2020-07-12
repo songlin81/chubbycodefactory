@@ -11,7 +11,11 @@ const routes: Routes = [
   {path: "", redirectTo: paths.dashboard, pathMatch: 'full'},
   {path: paths.accounts, component: AccountsComponent},
   {path: paths.person, component: PersonComponent},
-  {path: paths.dashboard, component: DashboardComponent},
+  {
+    path: paths.dashboard,
+    loadChildren: ()=>import('./dashboard/dashboard.module').then(m=>m.DashboardModule),
+    component: DashboardComponent
+  },
   {
     path: '**', 
     resolve: {

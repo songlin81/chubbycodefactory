@@ -5,6 +5,7 @@ import { Food } from '../model/Food';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { startWith, map, tap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -54,7 +55,8 @@ export class DashboardComponent implements OnInit {
   months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
   selectItem="N/A";
 
-  constructor(public dialog: MatDialog) {
+  constructor(public dialog: MatDialog,
+    private router: Router, private route: ActivatedRoute) {
     this.loadStates();
   }
 
@@ -158,5 +160,12 @@ export class DashboardComponent implements OnInit {
   toggleTemplate(event) {
     this.isavailable = !this.isavailable; 
     console.log(event);
+  }
+
+  navConfig(){
+    this.router.navigate(['./config'], {relativeTo: this.route});
+  }
+  navDetail(){
+    this.router.navigate(['./detail'], {relativeTo: this.route});
   }
 }

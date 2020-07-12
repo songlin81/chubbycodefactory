@@ -136,7 +136,19 @@
         <button mat-stroked-button (click) = "toggleTemplate($event)">Toggle template</button>
 
         <mat-divider style="margin-top: 10px;"></mat-divider>
-        
+        <button mat-flat-button [matMenuTriggerFor] = "menu">Nested routes</button>
+        <mat-menu #menu = "matMenu">
+            <button mat-menu-item (click)="navConfig()">Config</button>
+            <button mat-menu-item (click)="navDetail()">Detail</button>
+            <button mat-menu-item [matMenuTriggerFor] = "recent">Recent</button>
+        </mat-menu>
+        <mat-menu #recent = "matMenu">
+            <button mat-menu-item (click)="navConfig()">Config</button>
+            <button mat-menu-item (click)="navDetail()">Detail</button>
+        </mat-menu>
+        <br>
+        <router-outlet></router-outlet>
     </mat-tab>
-    <mat-tab label = "Misc"> ... </mat-tab>
+    <mat-tab label = "Misc">Misc contents</mat-tab>
+    
 </mat-tab-group>

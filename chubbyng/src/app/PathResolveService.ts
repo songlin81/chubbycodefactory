@@ -10,6 +10,7 @@ export class PathResolveService implements Resolve<string | null> {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): string | null {
+    console.log(state.url);
     const typoPath = state.url.replace('/', '');
     const threshold = this.getThreshold(typoPath);
     const dictionary = Object.values(paths)
@@ -19,14 +20,13 @@ export class PathResolveService implements Resolve<string | null> {
 
     this.sortByDistances(typoPath, dictionary);
 
-    //console.log(dictionary);
     return `/${dictionary[0]}`;
   }
 
   getThreshold(path: string): number {
     if (path.length < 5) { return 3; }
 
-    return 5;
+    return 30;
   }
 
   sortByDistances(typoPath: string, dictionary: string[]) {

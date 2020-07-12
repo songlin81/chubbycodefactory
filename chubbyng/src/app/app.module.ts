@@ -23,6 +23,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { PathResolveService } from './PathResolveService';
 import { PopupComponent } from './popup/popup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DashboardRoutingModule } from './dashboard/dashboard-routing.module';
 
 @NgModule({
   declarations: [

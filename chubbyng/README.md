@@ -48,3 +48,11 @@
     linsong@linsongdeMacBook-Air chubbyng % ng g c person --module=app
     linsong@linsongdeMacBook-Air chubbyng % ng g c NotFound --module=app
     linsong@linsongdeMacBook-Air chubbyng % ng g c popup --module=app
+
+[12] LazyLoad and nested routing
+    linsong@linsongdeMacBook-Air chubbyng % ng g m dashboard --routing      
+    linsong@linsongdeMacBook-Air dashboard % pwd
+        /Users/linsong/Documents/NG/chubbycodefactory/chubbycodefactory/chubbyng/src/app/dashboard 
+    linsong@linsongdeMacBook-Air dashboard % ng g c DashboardConfig
+    linsong@linsongdeMacBook-Air dashboard % ng g c DashboardDetail
+    linsong@linsongdeMacBook-Air dashboard % ng g c Dashboard404
