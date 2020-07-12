@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard-detail',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardDetailComponent implements OnInit {
 
-  constructor() { }
+  detailId: string;
+
+  constructor(private route: ActivatedRoute) { 
+    route.params.subscribe(params => { this.detailId = params['configId']; });
+  }
 
   ngOnInit() {
   }
-
 }

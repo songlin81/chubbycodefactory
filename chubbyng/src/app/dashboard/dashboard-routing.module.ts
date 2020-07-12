@@ -8,7 +8,7 @@ import { Dashboard404Component } from './dashboard404/dashboard404.component';
 
 const routes: Routes = [
   { path : "config", component : DashboardConfigComponent },
-  { path : "detail", component : DashboardDetailComponent },
+  { path : "detail/:configId", component : DashboardDetailComponent },
   { path : "", redirectTo : "config" },
   {
     path: '**', 

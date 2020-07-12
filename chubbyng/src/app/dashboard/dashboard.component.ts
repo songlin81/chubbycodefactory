@@ -165,7 +165,7 @@ export class DashboardComponent implements OnInit {
   navConfig(){
     this.router.navigate(['./config'], {relativeTo: this.route});
   }
-  navDetail(){
-    this.router.navigate(['./detail'], {relativeTo: this.route});
+  navDetail(configId: string){
+    this.router.navigate(['./detail', configId],{relativeTo: this.route});
   }
 }
