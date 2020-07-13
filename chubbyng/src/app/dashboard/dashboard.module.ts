@@ -6,9 +6,12 @@ import { DashboardConfigComponent } from './dashboard-config/dashboard-config.co
 import { DashboardDetailComponent } from './dashboard-detail/dashboard-detail.component';
 import { Dashboard404Component } from './dashboard404/dashboard404.component';
 
-
 @NgModule({
-  declarations: [DashboardConfigComponent, DashboardDetailComponent, Dashboard404Component],
+  declarations: [
+    DashboardConfigComponent, 
+    DashboardDetailComponent, 
+    Dashboard404Component
+  ],
   imports: [
     CommonModule,
     DashboardRoutingModule

@@ -66,5 +66,7 @@
 [15] Sanitization of HTML
     DomSanitizer included to footer
 
-[16] 
+[16]
+    linsong@linsongdeMacBook-Air chubbyng % ng g s services/apiservice
 
+linsong@linsongdeMacBook-Air chubbyng % ng g c dashboard/innerheader

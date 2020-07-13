@@ -6,6 +6,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { startWith, map, tap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ApiserviceService } from '../services/apiservice.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -59,8 +60,11 @@ export class DashboardComponent implements OnInit {
   todaydate = new Date();
   mathObject = {val1: 25, val2: 100};
 
+  public persondata = [];
+
   constructor(public dialog: MatDialog,
-    private router: Router, private route: ActivatedRoute) {
+              private router: Router, private route: ActivatedRoute,
+              private APIservice: ApiserviceService) {
     this.loadStates();
   }
 
@@ -95,6 +99,12 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.tooltipContent='Change here...';
+
+    this.APIservice.getPersons().subscribe((data) => {
+      this.persondata = Array.from(Object.keys(data), k=>data[k]);
+      console.log(this.persondata);
+    });
+
   }
 
   removeAll(){

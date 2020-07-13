@@ -26,6 +26,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardRoutingModule } from './dashboard/dashboard-routing.module';
 import { MathSqrtPipe } from './pipes/math-sqrt.pipe';
 import { ChangeTextDirective } from './directives/change-text.directive';
+import { OuterComponent } from './outer/outer.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ChangeTextDirective } from './directives/change-text.directive';
     NotFoundComponent,
     PopupComponent,
     MathSqrtPipe,
-    ChangeTextDirective
+    ChangeTextDirective,
+    OuterComponent
   ],
   imports: [
     BrowserModule,

@@ -157,7 +157,15 @@
         </div>
 
         <mat-divider style="margin-top: 10px;"></mat-divider>
-        
+        <ul>
+            <li *ngFor="let item of persondata; let i = index">
+                {{i}}--{{item.name}}
+            </li>
+        </ul>
+    </mat-tab>
+
+    <mat-tab label = "Redux">
+        <app-outer></app-outer>
     </mat-tab>
     
 </mat-tab-group>
