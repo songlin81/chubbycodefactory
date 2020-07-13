@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-footer',
@@ -10,7 +11,12 @@ export class FooterComponent implements OnInit {
   chubbyId;
   chubbyMinor;
 
-  constructor() { }
+  dangerousUrl='&copy;';
+  myHTML;
+
+  constructor(sanitizer: DomSanitizer) {
+    this.myHTML= sanitizer.bypassSecurityTrustHtml(this.dangerousUrl);
+  }
 
   ngOnInit() {
     this.initTranslationTerms();

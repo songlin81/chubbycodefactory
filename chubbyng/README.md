@@ -62,3 +62,9 @@
 
 [14] Directives
     linsong@linsongdeMacBook-Air chubbyng % ng g directive directives/ChangeText --module=app
+
+[15] Sanitization of HTML
+    DomSanitizer included to footer
+
+[16] 
+
