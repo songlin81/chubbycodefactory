@@ -27,6 +27,7 @@ import { DashboardRoutingModule } from './dashboard/dashboard-routing.module';
 import { MathSqrtPipe } from './pipes/math-sqrt.pipe';
 import { ChangeTextDirective } from './directives/change-text.directive';
 import { OuterComponent } from './outer/outer.component';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { OuterComponent } from './outer/outer.component';
       }
     }),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxSpinnerModule
   ],
   providers: [
     VersionserviceService, 

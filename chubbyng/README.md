@@ -69,4 +69,10 @@
 [16]
     linsong@linsongdeMacBook-Air chubbyng % ng g s services/apiservice
 
+[17] spinner
+    linsong@linsongdeMacBook-Air chubbyng % npm install bootstrap --save
+    linsong@linsongdeMacBook-Air chubbyng % npm install ngx-spinner --save
+    linsong@linsongdeMacBook-Air chubbyng % ng g class model/Employee --spec=false
+
+
 linsong@linsongdeMacBook-Air chubbyng % ng g c dashboard/innerheader

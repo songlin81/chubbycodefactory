@@ -3,4 +3,5 @@ export class AppSettings{
     public static version = 0.1;
     public static apiurl = "http://81.70.9.51:5000/getLangList";
     public static personUrl = "http://jsonplaceholder.typicode.com/users";
+    public static empurl = "http://81.70.9.51:5000/getEmpList";
 }

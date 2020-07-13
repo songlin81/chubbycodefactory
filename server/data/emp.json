@@ -1,0 +1,52 @@
+[
+    {
+        "Id": 123, 
+        "Name": 999,
+        "Age": 10,
+        "Address": "Addr 01",  
+        "City": "NY",
+        "ContactNum": 111222,  
+        "Salary": 1000,
+        "Department": "Dep 01"
+    },
+    {
+        "Id": 124, 
+        "Name": 998,
+        "Age": 11,
+        "Address": "Addr 02",  
+        "City": "NZ",
+        "ContactNum": 111333,  
+        "Salary": 2000,
+        "Department": "Dep 02"
+    },
+    {
+        "Id": 125, 
+        "Name": 997,
+        "Age": 12,
+        "Address": "Addr 03",  
+        "City": "NW",
+        "ContactNum": 111444,  
+        "Salary": 3000,
+        "Department": "Dep 03"
+    },
+    {
+        "Id": 126, 
+        "Name": 993,
+        "Age": 13,
+        "Address": "Addr 04",  
+        "City": "NU",
+        "ContactNum": 111555,  
+        "Salary": 4000,
+        "Department": "Dep 04"
+    },
+    {
+        "Id": 127, 
+        "Name": 991,
+        "Age": 20,
+        "Address": "Addr 05",  
+        "City": "NP",
+        "ContactNum": 111999,  
+        "Salary": 11000,
+        "Department": "Dep 11"
+    }
+]

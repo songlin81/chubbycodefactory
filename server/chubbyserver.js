@@ -17,6 +17,12 @@ app.get('/getLangList', function(req, res){
     res.end(rawdata);
 });
 
+app.get('/getEmpList', function(req, res){
+   var rawdata = fs.readFileSync('./data/emp.json');
+   res.setHeader('Content-Type', 'application/json');
+   res.end(rawdata);
+});
+
 var server = app.listen(5000, function () {
    var host = server.address().address
    var port = server.address().port

@@ -28,4 +28,8 @@ export class ApiserviceService {
       return of(result as T); // Let the app keep running by returning an empty result.
     };
   }
+
+  GetemployeeDetails(){
+    return this.http.get(AppSettings.empurl); 
+  }
 }
