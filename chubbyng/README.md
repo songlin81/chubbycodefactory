@@ -74,5 +74,6 @@
     linsong@linsongdeMacBook-Air chubbyng % npm install ngx-spinner --save
     linsong@linsongdeMacBook-Air chubbyng % ng g class model/Employee --spec=false
 
-
-linsong@linsongdeMacBook-Air chubbyng % ng g c dashboard/innerheader
+[18] Redux
+    linsong@linsongdeMacBook-Air chubbyng % ng g m person --routing  
+    

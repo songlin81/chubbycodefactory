@@ -15,7 +15,7 @@ export class OuterComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.GetemployeeDetails();  
+    //this.GetemployeeDetails();  
   }
 
   GetemployeeDetails() {  
