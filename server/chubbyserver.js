@@ -3,6 +3,7 @@ var app = express();
 var bodyParser = require('body-parser');
 const fs = require('fs');
 const cors = require('cors');
+var sleep = require('system-sleep');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'));
@@ -18,6 +19,7 @@ app.get('/getLangList', function(req, res){
 });
 
 app.get('/getEmpList', function(req, res){
+   sleep(4*1000);
    var rawdata = fs.readFileSync('./data/emp.json');
    res.setHeader('Content-Type', 'application/json');
    res.end(rawdata);
