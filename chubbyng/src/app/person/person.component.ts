@@ -9,7 +9,7 @@ import { IAppState } from '../store/state/app.state';
 })
 export class PersonComponent implements OnInit {
 
-  title = 'angular-ngrx';
+  title = 'Home';
   
   constructor(
     private _store: Store<IAppState>

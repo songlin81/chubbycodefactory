@@ -20,6 +20,6 @@ export class UsersComponent implements OnInit {
   }
 
   navigateToUser(id: number) {
-    this._router.navigate(['user', id]);
+    this._router.navigate(['person/user', id]);
   }
 }

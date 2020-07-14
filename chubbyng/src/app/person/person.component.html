@@ -1,6 +1,7 @@
 <nav class="navbar d-flex navbar-dark bg-dark">
-    <a class="navbar-brand" routerLink="/">
-        {{title}}
+    <a class="navbar-brand" [routerLink]="['/person/users']">
+        <!-- {{title}} -->
+        <mat-icon matBadgeColor = "warn">home</mat-icon>
     </a>
     <div class="d-flex justify-content-end">
         <ul class="d-flex navbar-nav flex-row align-items-center">
