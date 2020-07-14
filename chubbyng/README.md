@@ -75,5 +75,6 @@
     linsong@linsongdeMacBook-Air chubbyng % ng g class model/Employee --spec=false
 
 [18] Redux
-    linsong@linsongdeMacBook-Air chubbyng % ng g m person --routing  
-    
+    linsong@linsongdeMacBook-Air chubbyng % ng g m person --routing
+    linsong@linsongdeMacBook-Air chubbyng % ng g c person/containers/users
+    linsong@linsongdeMacBook-Air chubbyng % ng g c person/containers/user

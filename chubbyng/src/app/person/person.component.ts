@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonComponent implements OnInit {
 
+  title = 'angular-ngrx';
+  
   constructor() { }
 
   ngOnInit() {

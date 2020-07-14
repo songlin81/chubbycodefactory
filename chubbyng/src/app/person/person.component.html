@@ -1,1 +1,17 @@
-<p>person works!</p>
+<nav class="navbar d-flex navbar-dark bg-dark">
+    <a class="navbar-brand" routerLink="/">
+        {{title}}
+    </a>
+
+    <div class="d-flex justify-content-end">
+        <ul class="d-flex navbar-nav flex-row align-items-center">
+            <li class="nav-item">
+                <a routerLink="/users" routerLinkActive="active">Users</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container app-container bg-light">
+    <router-outlet></router-outlet>
+</div>
