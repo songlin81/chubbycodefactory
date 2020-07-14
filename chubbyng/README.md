@@ -78,3 +78,11 @@
     linsong@linsongdeMacBook-Air chubbyng % ng g m person --routing
     linsong@linsongdeMacBook-Air chubbyng % ng g c person/containers/users
     linsong@linsongdeMacBook-Air chubbyng % ng g c person/containers/user
+    linsong@linsongdeMacBook-Air chubbyng % npm install @ngrx/core @ngrx/store --save
+    linsong@linsongdeMacBook-Air chubbyng % npm install @ngrx/router-store --save
+    linsong@linsongdeMacBook-Air chubbyng % npm install @ngrx/effects --save
+    linsong@linsongdeMacBook-Air chubbyng % ng g s services/User
+    linsong@linsongdeMacBook-Air chubbyng % ng g c person/components/users
+    linsong@linsongdeMacBook-Air chubbyng % ng g c person/components/user-details
+
+

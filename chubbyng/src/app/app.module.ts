@@ -23,11 +23,18 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { PathResolveService } from './PathResolveService';
 import { PopupComponent } from './popup/popup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { DashboardRoutingModule } from './dashboard/dashboard-routing.module';
 import { MathSqrtPipe } from './pipes/math-sqrt.pipe';
 import { ChangeTextDirective } from './directives/change-text.directive';
 import { OuterComponent } from './outer/outer.component';
 import { NgxSpinnerModule } from "ngx-spinner";
+
+import { StoreModule } from '@ngrx/store';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import { appReducers } from './store/reducers/app.reducers';
+import { EffectsModule } from '@ngrx/effects';
+import { UserEffects } from './store/effects/user.effects';
+import { UserService } from './services/user.service';
+//import { UsersComponent } from './person/containers/users/users.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +47,8 @@ import { NgxSpinnerModule } from "ngx-spinner";
     PopupComponent,
     MathSqrtPipe,
     ChangeTextDirective,
-    OuterComponent
+    OuterComponent,
+    //UsersComponent
   ],
   imports: [
     BrowserModule,
@@ -57,11 +65,15 @@ import { NgxSpinnerModule } from "ngx-spinner";
     }),
     FormsModule,
     ReactiveFormsModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    StoreModule.forRoot(appReducers),
+    EffectsModule.forRoot([UserEffects]),
+    StoreRouterConnectingModule.forRoot({ stateKey: 'router' })
   ],
   providers: [
     VersionserviceService, 
-    PathResolveService
+    PathResolveService,
+    UserService
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

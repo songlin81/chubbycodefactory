@@ -25,6 +25,12 @@ app.get('/getEmpList', function(req, res){
    res.end(rawdata);
 });
 
+app.get('/getUserList', function(req, res){
+   var rawdata = fs.readFileSync('./data/users.json');
+   res.setHeader('Content-Type', 'application/json');
+   res.end(rawdata);
+});
+
 var server = app.listen(5000, function () {
    var host = server.address().address
    var port = server.address().port
