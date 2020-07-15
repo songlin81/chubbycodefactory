@@ -85,4 +85,3 @@
     linsong@linsongdeMacBook-Air chubbyng % ng g c person/components/users
     linsong@linsongdeMacBook-Air chubbyng % ng g c person/components/user-details
 
-[root@VM_0_15_centos chubbyng]# ng b --prod --aot=false

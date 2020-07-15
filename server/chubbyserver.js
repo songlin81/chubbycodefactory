@@ -32,6 +32,13 @@ app.get('/getUserList', function(req, res){
    res.end(rawdata);
 });
 
+app.get('/getPermission', function(req, res){
+   sleep(2*1000);
+   var rawdata = fs.readFileSync('./data/config.json');
+   res.setHeader('Content-Type', 'application/json');
+   res.end(rawdata);
+});
+
 var server = app.listen(5000, function () {
    var host = server.address().address
    var port = server.address().port

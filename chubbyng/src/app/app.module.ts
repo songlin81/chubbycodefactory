@@ -36,6 +36,7 @@ import { UserEffects } from './store/effects/user.effects';
 import { UserService } from './services/user.service';
 //import { UsersComponent } from './person/containers/users/users.component';
 import { CacheInterceptor } from './http-interceptors/cache-interceptor';
+import { ConfigEffects } from './store/effects/config.effects';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,7 @@ import { CacheInterceptor } from './http-interceptors/cache-interceptor';
     ReactiveFormsModule,
     NgxSpinnerModule,
     StoreModule.forRoot(appReducers),
-    EffectsModule.forRoot([UserEffects]),
+    EffectsModule.forRoot([UserEffects, ConfigEffects]),
     StoreRouterConnectingModule.forRoot({ stateKey: 'router' })
   ],
   providers: [

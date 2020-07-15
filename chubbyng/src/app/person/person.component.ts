@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store, select } from '@ngrx/store';
 import { IAppState } from '../store/state/app.state';
+import { GetConfig } from '../store/actions/config.actions';
 
 @Component({
   selector: 'app-person',
@@ -18,5 +19,6 @@ export class PersonComponent implements OnInit {
   }
 
   ngOnInit() {
+    this._store.dispatch(new GetConfig());
   }
 }

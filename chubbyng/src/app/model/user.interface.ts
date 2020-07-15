@@ -3,4 +3,4 @@ export interface IUser {
     name: string;
     cardNumber: string;
     cardType: string;
-}  
+}
