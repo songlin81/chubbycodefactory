@@ -85,3 +85,7 @@
     linsong@linsongdeMacBook-Air chubbyng % ng g c person/components/users
     linsong@linsongdeMacBook-Air chubbyng % ng g c person/components/user-details
 
+[19] Build
+    linsong@linsongdeMacBook-Air chubbyng % ng build --prod --build--optimizer   
+    Dev:    linsong@linsongdeMacBook-Air chubbyng % ng serve -o  
+    Prod:   linsong@linsongdeMacBook-Air chubbyng % ng serve --prod
