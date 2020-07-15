@@ -9,7 +9,7 @@ import { AngularMaterialModule } from './angular-material.module';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { FooterComponent } from './footer/footer.component';
@@ -35,6 +35,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { UserEffects } from './store/effects/user.effects';
 import { UserService } from './services/user.service';
 //import { UsersComponent } from './person/containers/users/users.component';
+import { CacheInterceptor } from './http-interceptors/cache-interceptor';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,8 @@ import { UserService } from './services/user.service';
   providers: [
     VersionserviceService, 
     PathResolveService,
-    UserService
+    UserService,
+    { provide: HTTP_INTERCEPTORS, useClass: CacheInterceptor, multi: true }
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

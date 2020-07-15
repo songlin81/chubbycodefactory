@@ -14,3 +14,8 @@ export const selectSelectedUser = createSelector(
   selectUsers,
   (state: IUserState) => state.selectedUser
 );
+
+export const selectLoading= createSelector(
+  selectUsers,
+  (state: IUserState) => state.loading
+);

@@ -6,6 +6,7 @@ import { UsersComponent } from './components/users/users.component';
 import { UserComponent } from './containers/user/user.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { UsersComponent as UsersContainerComponent } from './containers/users/users.component';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { UsersComponent as UsersContainerComponent } from './containers/users/us
   ],
   imports: [
     CommonModule,
-    PersonRoutingModule
+    PersonRoutingModule,
+    NgxSpinnerModule
   ]
 })
 export class PersonModule { }

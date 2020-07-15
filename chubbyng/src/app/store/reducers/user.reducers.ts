@@ -33,7 +33,14 @@ export function userReducers (
     case EUserActions.GetUsersSuccess: {
       return {
         ...state,
-        users: action.payload
+        users: action.payload,
+        loading: true
+      };
+    }
+    case EUserActions.GetUsers: {
+      return {
+        ...state,
+        loading: false
       };
     }
     case EUserActions.GetUserSuccess: {
