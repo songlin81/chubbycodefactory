@@ -14,7 +14,7 @@ import { NgxSpinnerService } from "ngx-spinner";
 })
 export class UsersComponent implements OnInit {
   users$ = this._store.pipe(select(selectUserList));
-  status=false;
+
   constructor(private _store: Store<IAppState>, 
               private _router: Router,
               private SpinnerService: NgxSpinnerService) {
