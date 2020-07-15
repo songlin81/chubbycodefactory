@@ -26,6 +26,7 @@ app.get('/getEmpList', function(req, res){
 });
 
 app.get('/getUserList', function(req, res){
+   sleep(4*1000);
    var rawdata = fs.readFileSync('./data/users.json');
    res.setHeader('Content-Type', 'application/json');
    res.end(rawdata);
