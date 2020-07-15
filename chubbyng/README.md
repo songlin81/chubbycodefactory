@@ -89,3 +89,7 @@
     linsong@linsongdeMacBook-Air chubbyng % ng build --prod --build--optimizer   
     Dev:    linsong@linsongdeMacBook-Air chubbyng % ng serve -o  
     Prod:   linsong@linsongdeMacBook-Air chubbyng % ng serve --prod
+
+[20] Tool
+    linsong@linsongdeMacBook-Air chubbyng % ng g c tool --module=app
+    linsong@linsongdeMacBook-Air chubbyng % ng g m tool --routing

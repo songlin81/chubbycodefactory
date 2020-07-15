@@ -36,6 +36,7 @@ import { UserEffects } from './store/effects/user.effects';
 import { UserService } from './services/user.service';
 import { CacheInterceptor } from './http-interceptors/cache-interceptor';
 import { ConfigEffects } from './store/effects/config.effects';
+import { ToolComponent } from './tool/tool.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { ConfigEffects } from './store/effects/config.effects';
     PopupComponent,
     MathSqrtPipe,
     ChangeTextDirective,
-    OuterComponent
+    OuterComponent,
+    ToolComponent
   ],
   imports: [
     BrowserModule,

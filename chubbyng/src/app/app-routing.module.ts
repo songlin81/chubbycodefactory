@@ -6,6 +6,7 @@ import { PersonComponent } from './person/person.component';
 import { paths } from './app-paths';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PathResolveService } from './PathResolveService';
+import { ToolComponent } from './tool/tool.component';
 
 const routes: Routes = [
   {path: "", redirectTo: paths.dashboard, pathMatch: 'full'},
@@ -19,6 +20,11 @@ const routes: Routes = [
     path: paths.person,
     loadChildren: ()=>import('./person/person.module').then(m=>m.PersonModule),
     component: PersonComponent
+  },
+  {
+    path: paths.tool,
+    loadChildren: ()=>import('./tool/tool.module').then(m=>m.ToolModule),
+    component: ToolComponent
   },
   {
     path: '**', 

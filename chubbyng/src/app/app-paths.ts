@@ -1,5 +1,6 @@
 export const paths = {
     dashboard: 'dashboard',
     accounts: 'accounts',
-    person: 'person'
+    person: 'person',
+    tool: 'tool'
 };
