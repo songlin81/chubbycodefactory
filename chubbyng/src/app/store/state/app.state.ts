@@ -1,6 +1,6 @@
 import { RouterReducerState } from '@ngrx/router-store';
 import { IUserState, initialUserState } from './user.state';
-import { initialConfigState, IConfigState } from './config.state';
+import { IConfigState, initialConfigState } from './config.state';
 
 export interface IAppState {
   router?: RouterReducerState;

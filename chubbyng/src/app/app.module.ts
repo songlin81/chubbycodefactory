@@ -34,7 +34,6 @@ import { appReducers } from './store/reducers/app.reducers';
 import { EffectsModule } from '@ngrx/effects';
 import { UserEffects } from './store/effects/user.effects';
 import { UserService } from './services/user.service';
-//import { UsersComponent } from './person/containers/users/users.component';
 import { CacheInterceptor } from './http-interceptors/cache-interceptor';
 import { ConfigEffects } from './store/effects/config.effects';
 
@@ -49,8 +48,7 @@ import { ConfigEffects } from './store/effects/config.effects';
     PopupComponent,
     MathSqrtPipe,
     ChangeTextDirective,
-    OuterComponent,
-    //UsersComponent
+    OuterComponent
   ],
   imports: [
     BrowserModule,
