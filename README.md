@@ -11,3 +11,7 @@ Code factory for angular
     <kbd><img src="https://github.com/songlin81/chubbycodefactory/blob/master/screens/2.png" alt="Img 2" width="500"/></kbd>
 </p>
 
+## Ngrx
+<p float="left";>
+    <kbd><img src="https://github.com/songlin81/chubbycodefactory/blob/master/screens/3.png" alt="Img 3" width="500"/></kbd>
+</p>
