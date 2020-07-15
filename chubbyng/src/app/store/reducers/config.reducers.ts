@@ -1,10 +1,10 @@
 import { ConfigActions, EConfigActions } from '../actions/config.actions';
 import { initialConfigState, IConfigState } from './../state/config.state';
 
-export const configReducers = (
+export function configReducers (
   state = initialConfigState,
   action: ConfigActions
-): IConfigState => {
+): IConfigState {
   switch (action.type) {
     case EConfigActions.GetConfigSuccess: {
       return {
