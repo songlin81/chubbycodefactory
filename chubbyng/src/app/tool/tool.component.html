@@ -1,1 +1,9 @@
-<p>tool works!</p>
+<mat-toolbar color = "primary">
+    <!-- https://www.material.io/tools/color/ -->
+    <span class = "gap"><a [routerLink]="['/tool/file']">File</a></span>
+    <span><a [routerLink]="['/tool/edit']">Edit</a></span>
+    <span class = "filler"></span>
+    <span><a [routerLink]="['/tool/about']">About</a></span>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

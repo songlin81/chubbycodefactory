@@ -93,3 +93,7 @@
 [20] Tool
     linsong@linsongdeMacBook-Air chubbyng % ng g c tool --module=app
     linsong@linsongdeMacBook-Air chubbyng % ng g m tool --routing
+    linsong@linsongdeMacBook-Air chubbyng % ng g c tool/ToolAbout
+    linsong@linsongdeMacBook-Air chubbyng % ng g c tool/ToolFile 
+    linsong@linsongdeMacBook-Air chubbyng % ng g c tool/ToolEdit
+    linsong@linsongdeMacBook-Air chubbyng % ng g c tool/ToolCounter

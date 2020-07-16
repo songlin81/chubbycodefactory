@@ -1,0 +1,7 @@
+<div>
+    Root: {{ myCount }}
+    <app-tool-counter
+        [count]="myCount"
+        (change)="countChange($event)">
+    </app-tool-counter>
+</div>
