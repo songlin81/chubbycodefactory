@@ -97,3 +97,12 @@
     linsong@linsongdeMacBook-Air chubbyng % ng g c tool/ToolFile 
     linsong@linsongdeMacBook-Air chubbyng % ng g c tool/ToolEdit
     linsong@linsongdeMacBook-Air chubbyng % ng g c tool/ToolCounter
+
+[21] JWT
+    linsong@linsongdeMacBook-Air chubbyng % npm install @auth0/angular-jwt --save
+    server: 
+        linsong@linsongdeMacBook-Air server % npm install jsonwebtoken express-jwt --save
+    linsong@linsongdeMacBook-Air chubbyng % ng g component login --skipTests --inline-style --module=app
+    linsong@linsongdeMacBook-Air chubbyng % ng g service services/auth --flat --skipTests
+    linsong@linsongdeMacBook-Air chubbyng % ng g guard auth --flat --skipTests
+    

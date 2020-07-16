@@ -35,6 +35,7 @@ export class UsersComponent implements OnInit {
   }
 
   onRefresh(){
+    console.log('clicked');
     this.GetUserListing();
   }
 

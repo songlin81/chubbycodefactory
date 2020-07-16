@@ -18,8 +18,9 @@
         </mat-form-field>
       </div>
       <div style="position: absolute; right: 10px;">
-        <a mat-button [routerLink]="'/accounts'"><span translate>CN.Logon</span></a>
         <span class="flag-icon flag-icon-{{selectedLanguage | lowercase}} flag-icon-squared"></span>
+        <a routerLink="login" routerLinkActive="active" *ngIf="!auth.loggedIn"><span translate>CN.Logon</span></a>
+        <a (click)="logout()" href="#" *ngIf="auth.loggedIn">Logout</a>
       </div>
   </mat-toolbar-row>
 </mat-toolbar>
@@ -28,8 +29,8 @@
   <mat-sidenav #sidenav [mode]="setScreenMode() ? 'over' : 'side'" [(opened)]="openState">
     <mat-nav-list>
       <a mat-list-item [routerLink]="['/dashboard']"><mat-icon>dashboard</mat-icon> Dashboard </a>
-      <a mat-list-item [routerLink]="['/person']"><mat-icon>person</mat-icon> User Profile </a>
-      <a mat-list-item [routerLink]="['/tool']"><mat-icon>search</mat-icon> Tool </a>
+      <a mat-list-item [routerLink]="['/person']" *ngIf="auth.loggedIn"><mat-icon>person</mat-icon> User Profile </a>
+      <a mat-list-item [routerLink]="['/tool']" *ngIf="auth.loggedIn"><mat-icon>search</mat-icon> Tool </a>
       <a mat-list-item (click)="sidenav.toggle()"><mat-icon>block</mat-icon> Close </a>
     </mat-nav-list>
   </mat-sidenav>

@@ -7,6 +7,8 @@ import { paths } from './app-paths';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PathResolveService } from './PathResolveService';
 import { ToolComponent } from './tool/tool.component';
+import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {path: "", redirectTo: paths.dashboard, pathMatch: 'full'},
@@ -14,7 +16,8 @@ const routes: Routes = [
   {
     path: paths.dashboard,
     loadChildren: ()=>import('./dashboard/dashboard.module').then(m=>m.DashboardModule),
-    component: DashboardComponent
+    component: DashboardComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: paths.person,
@@ -26,6 +29,7 @@ const routes: Routes = [
     loadChildren: ()=>import('./tool/tool.module').then(m=>m.ToolModule),
     component: ToolComponent
   },
+  { path: 'login', component: LoginComponent },
   {
     path: '**', 
     resolve: {

@@ -7,6 +7,8 @@ import { Language } from './model/Language';
 import { TranslateService } from '@ngx-translate/core';
 import { LangserviceService } from './services/langservice.service';
 import { environment } from 'src/environments/environment';
+import { AuthService } from './services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -23,7 +25,9 @@ export class AppComponent {
 
   constructor(private titleService: Title,
     private translate: TranslateService,
-    private langService: LangserviceService){
+    private langService: LangserviceService,
+    private auth: AuthService, 
+    private router: Router){
     titleService.setTitle('Chubby');
 
     translate.setDefaultLang('en');
@@ -94,5 +98,10 @@ export class AppComponent {
     } else {
       return false;
     }
+  }
+
+  logout() {
+    this.auth.logout();
+    this.router.navigate(['login']);
   }
 }

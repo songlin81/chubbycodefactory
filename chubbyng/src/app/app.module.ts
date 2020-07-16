@@ -38,6 +38,14 @@ import { CacheInterceptor } from './http-interceptors/cache-interceptor';
 import { ConfigEffects } from './store/effects/config.effects';
 import { ToolComponent } from './tool/tool.component';
 
+import { JwtModule } from '@auth0/angular-jwt';
+import { LoginComponent } from './login/login.component';
+export function tokenGetter() {
+  return localStorage.getItem('access_token');
+}
+import { AuthService } from './services/auth.service';
+import { AuthGuard } from './auth.guard';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +58,8 @@ import { ToolComponent } from './tool/tool.component';
     MathSqrtPipe,
     ChangeTextDirective,
     OuterComponent,
-    ToolComponent
+    ToolComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -70,13 +79,22 @@ import { ToolComponent } from './tool/tool.component';
     NgxSpinnerModule,
     StoreModule.forRoot(appReducers),
     EffectsModule.forRoot([UserEffects, ConfigEffects]),
-    StoreRouterConnectingModule.forRoot({ stateKey: 'router' })
+    StoreRouterConnectingModule.forRoot({ stateKey: 'router' }),
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        allowedDomains: ['localhost:5000'],
+        disallowedRoutes: ['localhost:5000/api/auth']
+      }
+    })
   ],
   providers: [
     VersionserviceService, 
     PathResolveService,
     UserService,
-    { provide: HTTP_INTERCEPTORS, useClass: CacheInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: CacheInterceptor, multi: true },
+    AuthService,
+    AuthGuard
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
