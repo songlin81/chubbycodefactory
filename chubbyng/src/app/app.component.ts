@@ -22,19 +22,22 @@ export class AppComponent {
   Languages: Language[];
   selectedLanguage;
   chubbyTM;
+  authS = null;
 
   constructor(private titleService: Title,
     private translate: TranslateService,
     private langService: LangserviceService,
     private auth: AuthService, 
     private router: Router){
-    titleService.setTitle('Chubby');
 
-    translate.setDefaultLang('en');
-    this.translate.get(["chubbyTitle", "CN"]).subscribe(res => {
-      //console.log(JSON.stringify(res));
-      //console.log(res.chubbyTitle);
-    });
+      this.authS = auth;
+      titleService.setTitle('Chubby');
+
+      translate.setDefaultLang('en');
+      this.translate.get(["chubbyTitle", "CN"]).subscribe(res => {
+        //console.log(JSON.stringify(res));
+        //console.log(res.chubbyTitle);
+      });
   }
 
   @ViewChild('sidenav', { static: true }) sidenav: MatSidenav;
@@ -101,7 +104,7 @@ export class AppComponent {
   }
 
   logout() {
-    this.auth.logout();
+    this.authS.logout();
     this.router.navigate(['login']);
   }
 }
