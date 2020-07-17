@@ -6,7 +6,7 @@ import { Title } from '@angular/platform-browser';
 import { Language } from './model/Language';
 import { TranslateService } from '@ngx-translate/core';
 import { LangserviceService } from './services/langservice.service';
-import { environment } from 'src/environments/environment';
+import { environment } from '../environments/environment';
 import { AuthService } from './services/auth.service';
 import { Router } from '@angular/router';
 
