@@ -46,6 +46,8 @@ export function tokenGetter() {
 import { AuthService } from './services/auth.service';
 import { AuthGuard } from './auth.guard';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -86,7 +88,8 @@ import { AuthGuard } from './auth.guard';
         allowedDomains: ['localhost:5000'],
         disallowedRoutes: ['localhost:5000/api/auth']
       }
-    })
+    }),
+    FlexLayoutModule
   ],
   providers: [
     VersionserviceService, 
