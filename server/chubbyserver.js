@@ -9,13 +9,16 @@ const jwt = require('jsonwebtoken');
 const expressJwt = require('express-jwt');
 app.use(bodyParser.json());
 
+const multipart = require('connect-multiparty');
+const multipartMiddleware = multipart({ uploadDir: './uploads' });
+
 var USERS = [
    { 'id': 1, 'username': 'jemma' },
    { 'id': 2, 'username': 'paul' },
    { 'id': 3, 'username': 'sebastian' },
 ];
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use(cors());
 app.get('/', function (req, res) {
@@ -58,7 +61,13 @@ app.post('/api/auth', function(req, res) {
    
    var token = jwt.sign({userID: user.id}, 'todo-app-super-shared-secret', {expiresIn: '2h'});
    res.send({token});
- });
+});
+
+app.post('/api/upload', multipartMiddleware, (req, res) => {
+   res.json({
+       'message': 'File uploaded successfully'
+   });
+});
 
 var server = app.listen(5000, function () {
    var host = server.address().address

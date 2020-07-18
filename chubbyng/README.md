@@ -115,3 +115,12 @@
     linsong@linsongdeMacBook-Air chubbyng % npm install -s @angular/flex-layout
     linsong@linsongdeMacBook-Air chubbyng % npm i -s @angular/flex-layout @angular/cdk
     linsong@linsongdeMacBook-Air card-view-demo-master % npm install -g node
+
+[24] bootstrap
+    linsong@linsongdeMacBook-Air chubbyng % npm install bootstrap --save
+    linsong@linsongdeMacBook-Air chubbyng % npm install jquery --save
+    linsong@linsongdeMacBook-Air server % npm install --save connect-multiparty
+    
+
+[todo] 
+    https://codecraft.tv/courses/angular/components/content-projection/
