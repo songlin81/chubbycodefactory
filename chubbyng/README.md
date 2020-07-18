@@ -110,8 +110,8 @@
     [root@VM_0_15_centos personalng]# netstat -lnp|grep 80
 
 [23] Responsive Card Grid
+    linsong@linsongdeMacBook-Air chubbyng % ng update --next @angular/cli --force
+    linsong@linsongdeMacBook-Air chubbyng % npm install typescript@latest
     linsong@linsongdeMacBook-Air chubbyng % npm install -s @angular/flex-layout
     linsong@linsongdeMacBook-Air chubbyng % npm i -s @angular/flex-layout @angular/cdk
-    
-    linsong@linsongdeMacBook-Air chubbyng % ng update --next @angular/cli --force
-    npm install typescript@latest
+    linsong@linsongdeMacBook-Air card-view-demo-master % npm install -g node

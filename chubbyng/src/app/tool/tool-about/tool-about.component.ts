@@ -12,4 +12,11 @@ export class ToolAboutComponent implements OnInit {
   ngOnInit() {
   }
 
+  title = 'Card View';
+
+  gridColumns = 3;
+
+  toggleGridColumns() {
+    this.gridColumns = this.gridColumns === 3 ? 4 : 3;
+  }
 }

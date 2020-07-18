@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import {
    MatButtonModule,
@@ -56,7 +57,8 @@ import {
       MatCheckboxModule,
       MatSliderModule,
       MatSlideToggleModule,
-      MatMenuModule
+      MatMenuModule,
+      FlexLayoutModule
    ],
    exports: [
       MatButtonModule,
@@ -82,7 +84,8 @@ import {
       MatCheckboxModule,
       MatSliderModule,
       MatSlideToggleModule,
-      MatMenuModule
+      MatMenuModule,
+      FlexLayoutModule
    ],
    providers: [
       MatDatepickerModule,
