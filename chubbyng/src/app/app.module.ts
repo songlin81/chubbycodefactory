@@ -48,6 +48,8 @@ import { AuthGuard } from './auth.guard';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 
+import { ToastrModule } from 'ngx-toastr';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -89,7 +91,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
         disallowedRoutes: ['localhost:5000/api/auth']
       }
     }),
-    FlexLayoutModule
+    FlexLayoutModule,
+    ToastrModule.forRoot()
   ],
   providers: [
     VersionserviceService, 

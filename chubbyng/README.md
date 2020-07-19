@@ -119,7 +119,12 @@
 [24] bootstrap
     linsong@linsongdeMacBook-Air chubbyng % npm install bootstrap --save
     linsong@linsongdeMacBook-Air chubbyng % npm install jquery --save
+
+[25] upload
     linsong@linsongdeMacBook-Air server % npm install --save connect-multiparty
+    linsong@linsongdeMacBook-Air chubbyng % npm install ngx-toastr --save
+    linsong@linsongdeMacBook-Air chubbyng % npm install ng2-file-upload --save
+
     
 
 [todo] 
