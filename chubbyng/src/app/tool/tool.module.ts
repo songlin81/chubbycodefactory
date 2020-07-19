@@ -8,13 +8,20 @@ import { ToolEditComponent } from './tool-edit/tool-edit.component';
 import { ToolCounterComponent } from './tool-counter/tool-counter.component';
 import { AngularMaterialModule } from '../angular-material.module';
 
+import { FileUploadModule } from 'ng2-file-upload';
 
 @NgModule({
-  declarations: [ToolAboutComponent, ToolFileComponent, ToolEditComponent, ToolCounterComponent],
+  declarations: [
+    ToolAboutComponent, 
+    ToolFileComponent, 
+    ToolEditComponent, 
+    ToolCounterComponent
+  ],
   imports: [
     CommonModule,
     ToolRoutingModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    FileUploadModule
   ]
 })
 export class ToolModule { }

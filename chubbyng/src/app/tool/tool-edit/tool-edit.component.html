@@ -16,3 +16,13 @@
 <div class="col-md-4">{{result}}</div>
 
 <mat-divider style="margin: 10px;"></mat-divider>
+<div class="wrapper">
+    <div class="file-upload">
+        <input type="file" name="image" ng2FileSelect [uploader]="uploader" accept="image/x-png,image/gif,image/jpeg" />
+        <button type="button" (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length">
+        Upload
+        </button>
+    </div>
+</div>
+
+<mat-divider style="margin: 10px;"></mat-divider>

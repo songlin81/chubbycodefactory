@@ -18,12 +18,43 @@ var USERS = [
    { 'id': 3, 'username': 'sebastian' },
 ];
 
-app.use(bodyParser.urlencoded({ extended: true }));
+const path = require('path'),
+      multer = require('multer');
+const PATH = './uploads';
+let storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, PATH);
+  },
+  filename: (req, file, cb) => {
+     console.log(file.fieldname);
+    cb(null, Date.now()+'-'+file.originalname )
+  }
+});
+let upload = multer({
+   storage: storage
+ });
+
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'));
 app.use(cors());
 app.get('/', function (req, res) {
    res.send('404');
 })
+
+app.post('/api/uploader', upload.single('image'), function (req, res) {
+   if (!req.file) {
+     console.log("No file is available!");
+     return res.send({
+       success: false
+     });
+ 
+   } else {
+     console.log('File is available!');
+     return res.send({
+       success: true
+     })
+   }
+ });
 
 app.get('/getLangList', function(req, res){
     var rawdata = fs.readFileSync('./data/langList.json');

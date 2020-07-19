@@ -6,4 +6,6 @@ export class AppSettings{
     public static empurl = "http://81.70.9.51:5000/getEmpList";
     public static userurl = "http://81.70.9.51:5000/getUserList";
     public static permissionrurl = "http://81.70.9.51:5000/getPermission";
+    public static uploadUrl = "http://81.70.9.51:5000/api/upload";
+    public static uploaderUrl = "http://81.70.9.51:5000/api/uploader";
 }
