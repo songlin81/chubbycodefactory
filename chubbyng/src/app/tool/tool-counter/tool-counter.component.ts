@@ -15,7 +15,15 @@ export class ToolCounterComponent implements OnInit {
   
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {}
+
+  increment() {
+    this.count++;
+    this.change.emit(this.count);
   }
 
+  decrement() {
+    this.count--;
+    this.change.emit(this.count);
+  }
 }
