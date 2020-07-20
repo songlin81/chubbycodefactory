@@ -10,17 +10,18 @@ export class ToolFileComponent implements OnInit {
 
   myCount: number = 101;
 
-  subject1 : Subject<number> = new Subject<number>();
-  subject2 : BehaviorSubject<number> = new BehaviorSubject<number>(0);
-  subject3 : ReplaySubject<number> = new ReplaySubject<number>();
-  subject4 : AsyncSubject<number> = new AsyncSubject<number>();
-
   constructor() { }
 
   ngOnInit() {
   }
 
+  subject1;
+  subject2;
+  subject3;
+  subject4;
+
   subjectBtn(){
+    this.subject1 = new Subject<number>();
     this.subject1.next(100);
     this.subject1.subscribe((res:number)=>console.log("Subject A", res));
     this.subject1.subscribe((res:number)=>console.log("Subject B", res));
@@ -29,6 +30,7 @@ export class ToolFileComponent implements OnInit {
   }
 
   behaviorSubjectBtn(){
+    this.subject2 = new BehaviorSubject<number>(0);
     this.subject2.next(100);
     this.subject2.subscribe((res:number)=>console.log("Behavior subject A", res));
     this.subject2.next(200);
@@ -37,6 +39,7 @@ export class ToolFileComponent implements OnInit {
   }
 
   replaySubjectBtn(){
+    this.subject3 = new ReplaySubject<number>();
     this.subject3.next(100);
     this.subject3.next(200);
     this.subject3.subscribe((res:number)=>console.log("Replay subject A", res));
@@ -46,6 +49,7 @@ export class ToolFileComponent implements OnInit {
   }
 
   asyncSubjectBtn(){
+    this.subject4 = new AsyncSubject<number>();
     this.subject4.next(100);
     this.subject4.next(200);
     this.subject4.subscribe((res:number)=>console.log("Async subject A", res));
@@ -56,6 +60,17 @@ export class ToolFileComponent implements OnInit {
     this.subject4.complete();
     this.subject4.subscribe((res:number)=>console.log("Async subject D", res));
     this.subject4.next(500);
+  }
+
+  unsubscribe(){
+    if(this.subject1!=null)
+      this.subject1.unsubscribe();
+    if(this.subject2!=null)
+      this.subject2.unsubscribe();
+    if(this.subject3!=null)
+      this.subject3.unsubscribe();
+    if(this.subject4!=null)
+      this.subject4.unsubscribe();
   }
 
   countChange(event) {
