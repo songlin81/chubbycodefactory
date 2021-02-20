@@ -22,12 +22,14 @@ const routes: Routes = [
   {
     path: paths.person,
     loadChildren: ()=>import('./person/person.module').then(m=>m.PersonModule),
-    component: PersonComponent
+    component: PersonComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: paths.tool,
     loadChildren: ()=>import('./tool/tool.module').then(m=>m.ToolModule),
-    component: ToolComponent
+    component: ToolComponent,
+    canActivate: [AuthGuard]
   },
   { path: 'login', component: LoginComponent },
   {
