@@ -129,3 +129,7 @@
     linsong@linsongdeMacBook-Air chubbyng % ng g directive directives/counting --module=app
     linsong@linsongdeMacBook-Air chubbyng % ng g directive directives/ExeHighlight --module=app
     linsong@linsongdeMacBook-Air chubbyng % ng g directive directives/exeButtonPress --module=app
+
+[27] 
+    linsong@linsongdeMacBook-Air chubbyng % npm install ngx-cookie-service --save
+

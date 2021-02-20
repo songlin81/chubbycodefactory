@@ -9,6 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ApiserviceService } from '../services/apiservice.service';
 
 import { ElementRef, ViewChild } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-dashboard',
@@ -68,7 +69,8 @@ export class DashboardComponent implements OnInit {
 
   constructor(public dialog: MatDialog,
               private router: Router, private route: ActivatedRoute,
-              private APIservice: ApiserviceService) {
+              private APIservice: ApiserviceService,
+              private cookieService: CookieService) {
     this.loadStates();
   }
 
@@ -109,6 +111,7 @@ export class DashboardComponent implements OnInit {
       console.log(this.persondata);
     });
 
+    this.cookieService.set('type', "ng 101");
   }
 
   removeAll(){
@@ -189,6 +192,7 @@ export class DashboardComponent implements OnInit {
 
   toCount(){
     this.numberOfClicks++;
+    console.dir(this.cookieService.get("type"));
   }
 
   @ViewChild('greet')

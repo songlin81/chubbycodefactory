@@ -6,6 +6,8 @@ import { DashboardConfigComponent } from './dashboard-config/dashboard-config.co
 import { DashboardDetailComponent } from './dashboard-detail/dashboard-detail.component';
 import { Dashboard404Component } from './dashboard404/dashboard404.component';
 
+import { CookieService } from 'ngx-cookie-service';
+
 @NgModule({
   declarations: [
     DashboardConfigComponent, 
@@ -15,6 +17,9 @@ import { Dashboard404Component } from './dashboard404/dashboard404.component';
   imports: [
     CommonModule,
     DashboardRoutingModule
+  ],
+  providers: [
+    CookieService
   ]
 })
 export class DashboardModule { }
