@@ -124,3 +124,8 @@
     linsong@linsongdeMacBook-Air server % npm install --save connect-multiparty
     linsong@linsongdeMacBook-Air chubbyng % npm install ngx-toastr --save
     linsong@linsongdeMacBook-Air chubbyng % npm install ng2-file-upload --save
+
+[26] 
+    linsong@linsongdeMacBook-Air chubbyng % ng g directive directives/counting --module=app
+    linsong@linsongdeMacBook-Air chubbyng % ng g directive directives/ExeHighlight --module=app
+    linsong@linsongdeMacBook-Air chubbyng % ng g directive directives/exeButtonPress --module=app

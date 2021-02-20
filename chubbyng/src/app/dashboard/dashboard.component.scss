@@ -37,3 +37,13 @@ table {
 .mat-slider-vertical {
     height: 200px;
 }
+
+button {
+    background: blue;
+    color: white;
+    border: 1px solid #eee;
+}
+
+button.pressed {
+    background: red;
+}

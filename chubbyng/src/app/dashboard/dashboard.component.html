@@ -153,7 +153,21 @@
     <mat-tab label = "Misc">
         <div style = "text-align:center">
             <b>{{todaydate | date:'d/M/y'}}</b> -- Square root of 25 is: {{mathObject | mathSqrt}}<br>
-            <span ChangeText>{{title | uppercase}}</span>
+            <span ChangeText>{{title | uppercase}}</span><br />
+            <button (click)="toCount()" appCounting>Click to increase</button> {{numberOfClicks}}
+            <h4 appExeHighlight>Flip color</h4>
+            <button appExeButtonPress>Press Button</button><br />
+
+            <div #greet>Hello {{ title }}</div>
+            <span #tref>Span...</span>
+
+            <hr><ng-container *ngTemplateOutlet="gree; context: myContext"></ng-container>
+            <hr><ng-container *ngTemplateOutlet="eng; context: myContext"></ng-container>
+            <hr><ng-container *ngTemplateOutlet="svk; context: myContext"></ng-container>
+            <hr>
+            <ng-template #gree let-zipper="zipp"><span>Hello {{zipper}}</span></ng-template>
+            <ng-template #eng let-name><span>Hello {{name}}!</span></ng-template>
+            <ng-template #svk let-person="localSk"><span>Ahoj {{person}}!</span></ng-template>
         </div>
 
         <mat-divider style="margin-top: 10px;"></mat-divider>

@@ -49,6 +49,9 @@ import { AuthGuard } from './auth.guard';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { ToastrModule } from 'ngx-toastr';
+import { CountingDirective } from './directives/counting.directive';
+import { ExeHighlightDirective } from './directives/exe-highlight.directive';
+import { ExeButtonPressDirective } from './directives/exe-button-press.directive';
 
 @NgModule({
   declarations: [
@@ -63,7 +66,10 @@ import { ToastrModule } from 'ngx-toastr';
     ChangeTextDirective,
     OuterComponent,
     ToolComponent,
-    LoginComponent
+    LoginComponent,
+    CountingDirective,
+    ExeHighlightDirective,
+    ExeButtonPressDirective
   ],
   imports: [
     BrowserModule,

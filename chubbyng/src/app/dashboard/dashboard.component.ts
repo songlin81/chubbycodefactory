@@ -8,6 +8,8 @@ import { Observable } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApiserviceService } from '../services/apiservice.service';
 
+import { ElementRef, ViewChild } from '@angular/core';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -61,6 +63,8 @@ export class DashboardComponent implements OnInit {
   mathObject = {val1: 25, val2: 100};
 
   public persondata = [];
+
+  numberOfClicks = 0;
 
   constructor(public dialog: MatDialog,
               private router: Router, private route: ActivatedRoute,
@@ -182,4 +186,21 @@ export class DashboardComponent implements OnInit {
   navDetail(configId: string){
     this.router.navigate(['./detail', configId],{relativeTo: this.route});
   }
+
+  toCount(){
+    this.numberOfClicks++;
+  }
+
+  @ViewChild('greet')
+  greetDiv: ElementRef;
+ 
+  @ViewChild("tref", {read: ElementRef})
+  tref: ElementRef;
+
+  myContext = {$implicit: 'Chubby 101', localSk: 'Song', zipp:'sdk 0.1'};
+
+  ngAfterViewInit() {
+    this.greetDiv.nativeElement.style.backgroundColor = 'yellow';
+    console.dir(this.tref.nativeElement.textContent);
+  }  
 }
