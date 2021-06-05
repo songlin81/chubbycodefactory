@@ -13,7 +13,7 @@
         "host": "localhost",
         "port": 5001
 
-[4] MD
+[4] Material
     linsong@linsongdeMacBook-Air chubbyng % ng add @angular/material
     ? Choose a prebuilt theme name, or "custom" for a custom theme: Deep Purple/Amber
     ? Set up HammerJS for gesture recognition? Yes
